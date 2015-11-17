@@ -1,0 +1,68 @@
+{
+  "name" : "blueblazeassociates/nextgen-gallery",
+  "description" : "The most popular gallery plugin for WordPress and one of the most popular plugins of all time with over 12 million downloads.",
+  "type" : "wordpress-plugin",
+  "homepage" : "http://www.nextgen-gallery.com",
+  "license" : "GPL-2.0+",
+  "authors" : [{
+    "name" : "Photocrati Media",
+    "homepage" : "http://www.photocrati.com",
+    "role" : "Author/Creator"
+  }, {
+    "name" : "Ed Gifford",
+    "homepage" : "http://www.blueblazeassociates.com",
+    "role" : "Composer-fier",
+    "email" : "egifford@blueblazeassociates.com"
+    }
+  ],
+  "keywords" : [
+    "album",
+    "albums",
+    "best gallery plugin",
+    "fancybox",
+    "free photo gallery",
+    "galleries",
+    "gallery",
+    "image",
+    "image album",
+    "image captions imagebrowser",
+    "image gallery",
+    "images",
+    "lightbox",
+    "media",
+    "media gallery",
+    "nextcellent",
+    "nextgen",
+    "nextgen gallery",
+    "photo",
+    "photo albums",
+    "photo gallery",
+    "photographer",
+    "photography",
+    "photos",
+    "picture",
+    "Picture Gallery",
+    "pictures",
+    "responsive",
+    "responsive galleries",
+    "responsive gallery",
+    "singlepic",
+    "slideshow",
+    "slideshow galleries",
+    "slideshow gallery",
+    "slideshows",
+    "thumbnail galleries",
+    "thumbnail gallery",
+    "thumbnails",
+    "watermarking",
+    "watermarks",
+    "wordpress gallery plugin",
+    "wordpress photo gallery plugin",
+    "wordpress responsive gallery",
+    "wp gallery",
+    "wp gallery plugins"
+  ],
+  "replace": {
+    "wpackagist-plugin/nextgen-gallery" : "2.1.15"
+  }
+}
