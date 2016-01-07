@@ -65,6 +65,7 @@
   "replace": {
     "wpackagist-plugin/nextgen-gallery" : "2.1.15",
     "wpackagist-plugin/nextgen-gallery" : "2.1.18",
-    "wpackagist-plugin/nextgen-gallery" : "2.1.19"
+    "wpackagist-plugin/nextgen-gallery" : "2.1.19",
+    "wpackagist-plugin/nextgen-gallery" : "2.1.20"
   }
 }
