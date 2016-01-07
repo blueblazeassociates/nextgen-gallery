@@ -1,8 +1,8 @@
 === NextGEN Gallery ===
 Contributors: photocrati
 Tags: nextgen, nextgen gallery, gallery, galleries, image, images, image gallery, photo, photos, photo gallery, picture, pictures, picture gallery, album, albums, photo albums, image album, media, media gallery, thumbnails, thumbnail gallery, thumbnail galleries, slideshow, slideshows, slideshow gallery, slideshow galleries, fancybox, lightbox, responsive, responsive gallery, responsive galleries, wordpress responsive gallery, nextcellent, wordpress gallery plugin, wordpress photo gallery plugin, wp gallery, wp gallery plugins, best gallery plugin, free photo gallery, singlepic, image captions imagebrowser, watermarks, watermarking, photography, photographer
-Requires at least: 3.6.1
-Stable tag: 2.1.16
+Requires at least: 4.0.0
+Stable tag: 2.1.19
 Tested up to: 4.4
 License: GPLv2
 
@@ -198,6 +198,9 @@ For more information, feel free to visit the official website for the NextGEN Ga
 
 
 == Changelog ==
+
+= V2.1.19 - 12.23.2015 =
+* Fixed:   PHP warning about incorrect usage of parse_url()
 
 = V2.1.18 - 12.21.2015 =
 * NEW:     Added text domain and domain path to plugin header
