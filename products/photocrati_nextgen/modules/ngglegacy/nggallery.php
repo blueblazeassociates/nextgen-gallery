@@ -1,11 +1,4 @@
 <?php
-/*
- * Modified by Blue Blaze Associates, LLC
- *
- * Changes include:
- *
- * BEGIN egifford 2015_11_17: Fixing unknown/uninitialized index PHP error.
- */
 
 // Stop direct call
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
@@ -15,7 +8,6 @@ class nggLoader
 	var $version     = NGG_PLUGIN_VERSION;
 	var $dbversion   = '1.8.1';
 	var $minimum_WP  = '3.6.1';
-	var $donators    = 'http://www.nextgen-gallery.com/donators.php';
 	var $options     = '';
 	var $manage_page;
 	var $add_PHP5_notice = false;
@@ -28,7 +20,7 @@ class nggLoader
 			return;
 
 		// Determine plugin basename based on whether NGG is being used in
-		// it's legacy form, or as a Photocrati Gallery
+		// it's legacy form, or as a Photocrati-theme Gallery
 		if (defined('NGG_PLUGIN_BASENAME')) $this->plugin_name = NGG_PLUGIN_BASENAME;
 		else $this->plugin_name = basename(dirname(__FILE__)).'/'.basename(__FILE__);
 
@@ -64,7 +56,7 @@ class nggLoader
 		global $nggRewrite;
 
 		// All credits to the tranlator
-		$this->translator  = '<p class="hint">'. __('<strong>Translation by : </strong><a target="_blank" href="http://www.nextgen-gallery.com/languages/">See here</a>', 'nggallery') . '</p>';
+		$this->translator  = '<p class="hint">'. __('<strong>Translation by : </strong><a target="_blank" href="https://www.imagely.com/wordpress-gallery-plugin/nextgen-pro/">See here</a>', 'nggallery') . '</p>';
 
 		// Content Filters
 		add_filter('ngg_gallery_name', 'sanitize_title');
@@ -79,11 +71,8 @@ class nggLoader
 		} else {
 
 			// Add MRSS to wp_head
-// BEGIN egifford 2015_11_17: Fixing unknown/uninitialized index PHP error.
-//			if ( $this->options['useMediaRSS'] )
-			if ( isset( $this->options['useMediaRSS'] ) && $this->options['useMediaRSS'] )
+			if ( $this->options['useMediaRSS'] )
 				add_action('wp_head', array('nggMediaRss', 'add_mrss_alternate_link'));
-// END egifford 2015_11_17
 
 		}
 	}
