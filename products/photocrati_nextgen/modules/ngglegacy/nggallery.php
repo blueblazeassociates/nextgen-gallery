@@ -1,4 +1,11 @@
 <?php
+/*
+ * Modified by Blue Blaze Associates, LLC
+ *
+ * Changes include:
+ *
+ * BEGIN egifford 2015_11_17: Fixing unknown/uninitialized index PHP error.
+ */
 
 // Stop direct call
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
@@ -71,8 +78,11 @@ class nggLoader
 		} else {
 
 			// Add MRSS to wp_head
-			if ( $this->options['useMediaRSS'] )
+// BEGIN egifford 2015_11_17: Fixing unknown/uninitialized index PHP error.
+//			if ( $this->options['useMediaRSS'] )
+			if ( isset( $this->options['useMediaRSS'] ) && $this->options['useMediaRSS'] )
 				add_action('wp_head', array('nggMediaRss', 'add_mrss_alternate_link'));
+// END egifford 2015_11_17
 
 		}
 	}
